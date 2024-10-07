@@ -50,9 +50,9 @@
 // const birthYear = 1979;
 
 // const job = "Freelance";
-// const now = 2037;
-// const ageTony = now - 1979;
-// const ageSarah = now - 2018;
+const now = 2037;
+const ageTony = now - 1979;
+const ageSarah = now - 2018;
 
 // console.log(ageTony, ageSarah);
 // console.log(ageTony * 2, ageTony / 2, 2 ** 3);
@@ -75,3 +75,11 @@
 // const isFullAge = ageSarah >= 18;
 
 // console.log(now - 1991 > now - 2018);
+
+let x, y;
+x = y = 25 - 10 - 5;
+console.log(x, y);
+
+const averageAge = (ageTony + ageSarah) / 2;
+
+console.log(ageTony, ageSarah, averageAge);
