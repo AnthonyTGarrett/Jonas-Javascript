@@ -50,9 +50,9 @@
 // const birthYear = 1979;
 
 // const job = "Freelance";
-const now = 2037;
-const ageTony = now - 1979;
-const ageSarah = now - 2018;
+// const now = 2037;
+// const ageTony = now - 1979;
+// const ageSarah = now - 2018;
 
 // console.log(ageTony, ageSarah);
 // console.log(ageTony * 2, ageTony / 2, 2 ** 3);
@@ -76,10 +76,56 @@ const ageSarah = now - 2018;
 
 // console.log(now - 1991 > now - 2018);
 
-let x, y;
-x = y = 25 - 10 - 5;
-console.log(x, y);
+// let x, y;
+// x = y = 25 - 10 - 5;
+// console.log(x, y);
 
-const averageAge = (ageTony + ageSarah) / 2;
+// const averageAge = (ageTony + ageSarah) / 2;
 
-console.log(ageTony, ageSarah, averageAge);
+// console.log(ageTony, ageSarah, averageAge);
+
+// const firstName = "Anthony";
+// const job = "Programmer";
+// const birthYear = 1979;
+// const currentYear = 2037;
+
+// const anthony =
+//   "I'm " +
+//   firstName +
+//   ", a " +
+//   (currentYear - birthYear) +
+//   " year old " +
+//   job +
+//   "!";
+// console.log(anthony);
+
+// const jonasNew = `I'm ${firstName}, a ${
+//   currentYear - birthYear
+// } year old ${job}!`;
+// console.log(jonasNew);
+
+// console.log(`String
+//   multiple
+//   lines`);
+
+// const day = "monday";
+
+// if (day === "monday") {
+//   console.log("do monday stuff");
+//   console.log("do more monday stuff");
+// } else if (day === "tuesday") {
+//   console.log("do tuesday stuff");
+// } else if (day === "wednesday" || day === "thursday") {
+//   console.log("do wednesday or thursday stuff");
+// }
+
+const foodValue = 430;
+
+let tip =
+  foodValue >= 50 && foodValue <= 300 ? foodValue * 0.15 : foodValue * 0.2;
+
+console.log(
+  `The bill was ${foodValue}, the tip was ${tip}, and the total value is ${
+    foodValue + tip
+  }`
+);
