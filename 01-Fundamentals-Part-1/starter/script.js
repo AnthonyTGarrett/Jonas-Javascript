@@ -129,3 +129,6 @@ console.log(
     foodValue + tip
   }`
 );
+
+const stuff = 'things';
+console.log(foodValue);
