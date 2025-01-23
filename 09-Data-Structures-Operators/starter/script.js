@@ -41,9 +41,127 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
+    );
+  },
+
+  orderPizza: function (mainIngrediant, ...otherIngrediants) {
+    console.log(mainIngrediant);
+    console.log(otherIngrediants);
+  },
 };
+
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+rest1.numGuests = rest1.numGuests || 10;
+rest2.numGuests = rest2.numGuests || 10;
+
+// Doesn't work with 0
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+
+// Nullish assignment operator - Null or Undefined
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+rest2.owner = rest2.owner && '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+
+console.log(rest1);
+console.log(rest2);
+
+// Use any data type, return any data type, short-circuit
+// console.log(3 || 'Tony');
+// console.log('' || 'Tony');
+// console.log(true || 0);
+// console.log(undefined || null);
+
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
+
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
+
+// Spread is on the right side of the =
+// const arr = [1, 2, ...[3, 4]];
+
+// // Rest syntax on the left side of =
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
+
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(pizza, risotto, otherFood);
+
+// // Objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
+
+// // Functions
+// const add = function (...numbers) {
+//   let sum = 0;
+//   return numbers.reduce((sum, cv) => sum + cv, 0);
+// };
+
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+
 // Spread operator
-const arr = [7, 8, 9];
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
+
+// const goodNewArr = [1, 2, ...arr];
+// console.log(goodNewArr);
+
+// console.log(...goodNewArr);
+
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
+
+// // Copy Array
+// const mainMenuCopy = [...restaurant.mainMenu];
+
+// // Join 2 arrays
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(...menu);
+// // Iterables: arrays, strings, maps, sets. NOT objects
+// const str = 'Jonas';
+// const letters = [...str, ' ', 'S.'];
+// console.log(letters);
+// console.log(...str);
+
+// // const ingredients = [
+// //   prompt('Lets make pasta! Ingredient 1?'),
+// //   prompt('Lets make pasta! Ingredient 2?'),
+// //   prompt('Lets make pasta! Ingredient 3?'),
+// // ];
+
+// // console.log(ingredients);
+// // restaurant.orderPasta(...ingredients);
+
+// const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+// console.log(newRestaurant);
+
+// const ResterauntCopy = { ...restaurant };
+// ResterauntCopy.name = 'Ristorante Roma';
+// console.log(ResterauntCopy.name);
 
 // restaurant.orderDelivery({
 //   time: '22:30',
