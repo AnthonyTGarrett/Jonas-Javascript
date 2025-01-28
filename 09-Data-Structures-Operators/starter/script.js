@@ -54,32 +54,36 @@ const restaurant = {
   },
 };
 
-const rest1 = {
-  name: 'Capri',
-  numGuests: 20,
-};
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-const rest2 = {
-  name: 'La Piazza',
-  owner: 'Giovanni Rossi',
-};
+for (const item of menu) console.log(item);
 
-rest1.numGuests = rest1.numGuests || 10;
-rest2.numGuests = rest2.numGuests || 10;
+// const rest1 = {
+//   name: 'Capri',
+//   numGuests: 20,
+// };
 
-// Doesn't work with 0
-rest1.numGuests ||= 10;
-rest2.numGuests ||= 10;
+// const rest2 = {
+//   name: 'La Piazza',
+//   owner: 'Giovanni Rossi',
+// };
 
-// Nullish assignment operator - Null or Undefined
-rest1.numGuests ??= 10;
-rest2.numGuests ??= 10;
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
 
-rest2.owner = rest2.owner && '<ANONYMOUS>';
-rest2.owner &&= '<ANONYMOUS>';
+// // Doesn't work with 0
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
 
-console.log(rest1);
-console.log(rest2);
+// // Nullish assignment operator - Null or Undefined
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
+
+// rest2.owner = rest2.owner && '<ANONYMOUS>';
+// rest2.owner &&= '<ANONYMOUS>';
+
+// console.log(rest1);
+// console.log(rest2);
 
 // Use any data type, return any data type, short-circuit
 // console.log(3 || 'Tony');

@@ -41,26 +41,26 @@ const game = {
   },
 };
 
-const [players1, players2] = game.players;
+// const [players1, players2] = game.players;
 
-const [gk, ...fieldPlayers] = game.players[0];
-const allPlayers = [...game.players[0], ...game.players[1]];
+// const [gk, ...fieldPlayers] = game.players[0];
+// const allPlayers = [...game.players[0], ...game.players[1]];
 
-const players1Final = [...game.players[0], 'Thiago', 'Coutinho', 'Perisic'];
+// const players1Final = [...game.players[0], 'Thiago', 'Coutinho', 'Perisic'];
 
-console.log(players1Final);
+// console.log(players1Final);
 
-const { team1, x: draw, team2 } = game.odds;
-console.log(team1, draw, team2);
+// const { team1, x: draw, team2 } = game.odds;
+// console.log(team1, draw, team2);
 
-const printGoals = function (...names) {
-  for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-  }
-  console.log(`Number of goals scored in total: ${names.length}`);
-};
+// const printGoals = function (...names) {
+//   for (let i = 0; i < names.length; i++) {
+//     console.log(names[i]);
+//   }
+//   console.log(`Number of goals scored in total: ${names.length}`);
+// };
 
-printGoals(...game.scored);
+// printGoals(...game.scored);
 
-team1 < team2 && console.log(`Team 1 is more likely to win`);
-team1 > team2 && console.log();
+// team1 < team2 && console.log(`Team 1 is more likely to win`);
+// team1 > team2 && console.log();
