@@ -41,6 +41,33 @@ const game = {
   },
 };
 
+const scorers = {};
+
+for (const player of game.scored) {
+  if (scorers[player]) {
+    scorers[player] += 1;
+  } else {
+    scorers[player] = 1;
+  }
+}
+
+console.log(scorers);
+
+console.log(`Odds of victory ${game.team1}: ${game.odds.team1}`);
+console.log(`Odds of draw: ${game.odds.x}`);
+console.log(`Odds of victory ${game.team2}: ${game.odds.team2}`);
+
+for (const [goal, player] of Object.entries(game.scored)) {
+  console.log(`Goal${+goal + 1}: ${player}`);
+}
+
+let sum = 0;
+
+for (const odd of Object.values(game.odds)) {
+  sum += odd;
+}
+console.log(`The average odds is: ${sum / 3}`);
+
 // const [players1, players2] = game.players;
 
 // const [gk, ...fieldPlayers] = game.players[0];
