@@ -1,79 +1,79 @@
 'use strict';
 
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
-const scorers = {};
+// const scorers = {};
 
-for (const player of game.scored) {
-  if (scorers[player]) {
-    scorers[player] += 1;
-  } else {
-    scorers[player] = 1;
-  }
-}
+// for (const player of game.scored) {
+//   if (scorers[player]) {
+//     scorers[player] += 1;
+//   } else {
+//     scorers[player] = 1;
+//   }
+// }
 
-console.log(scorers);
+// console.log(scorers);
 
-console.log(`Odds of victory ${game.team1}: ${game.odds.team1}`);
-console.log(`Odds of draw: ${game.odds.x}`);
-console.log(`Odds of victory ${game.team2}: ${game.odds.team2}`);
+// console.log(`Odds of victory ${game.team1}: ${game.odds.team1}`);
+// console.log(`Odds of draw: ${game.odds.x}`);
+// console.log(`Odds of victory ${game.team2}: ${game.odds.team2}`);
 
-for (const [goal, player] of game.scored.entries()) {
-  console.log(`Goal ${+goal + 1}: ${player}`);
-}
+// for (const [goal, player] of game.scored.entries()) {
+//   console.log(`Goal ${+goal + 1}: ${player}`);
+// }
 
-let sum = 0;
+// let sum = 0;
 
-for (const odd of Object.values(game.odds)) {
-  sum += odd;
-}
-sum /= Object.values(game.odds).length;
+// for (const odd of Object.values(game.odds)) {
+//   sum += odd;
+// }
+// sum /= Object.values(game.odds).length;
 
-console.log(`The average odds is: ${sum}`);
+// console.log(`The average odds is: ${sum}`);
 
-for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team == 'x' ? 'draw' : `victory ${game[team]}`;
-  console.log(`Odds of ${teamStr} ${odd}`);
-}
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team == 'x' ? 'draw' : `victory ${game[team]}`;
+//   console.log(`Odds of ${teamStr} ${odd}`);
+// }
 
 // const [players1, players2] = game.players;
 
