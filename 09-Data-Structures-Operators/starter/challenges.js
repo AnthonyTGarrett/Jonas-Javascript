@@ -1,34 +1,57 @@
 'use strict';
 
-const gameEvents = new Map([
-  [17, '⚽️ GOAL'],
-  [36, '🔁 Substitution'],
-  [47, '⚽️ GOAL'],
-  [61, '🔁 Substitution'],
-  [64, '🔶 Yellow card'],
-  [69, '🔴 Red card'],
-  [70, '🔁 Substitution'],
-  [72, '🔁 Substitution'],
-  [76, '⚽️ GOAL'],
-  [80, '⚽️ GOAL'],
-  [92, '🔶 Yellow card'],
-]);
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
 
-const events = new Array(...new Set(gameEvents.values()));
-console.log(events);
+const processInput = function (e) {
+  const words = textArea.value.split('\n');
+  let i = 1;
+  for (const word of words) {
+    let myWord = word.trim().split('_');
+    console.log(
+      (
+        myWord[0].toLowerCase() +
+        myWord[1][0].toUpperCase() +
+        myWord[1].toLowerCase().slice(1)
+      ).padEnd(20, ' '),
+      '✅'.repeat(i)
+    );
+    i++;
+  }
+};
 
-gameEvents.delete(64);
-console.log(gameEvents);
+const textArea = document.querySelector('textarea');
+const button = document.querySelector('button');
 
-console.log(
-  `An event happened, on average, every ${90 / gameEvents.size} minutes`
-);
+button.addEventListener('click', processInput);
 
-for (const event of gameEvents) {
-  console.log(
-    `[${event[0] < 45 ? 'FIRST HALF' : 'SECOND HALF'}] ${event[0]}: ${event[1]}`
-  );
-}
+// const gameEvents = new Map([
+//   [17, '⚽️ GOAL'],
+//   [36, '🔁 Substitution'],
+//   [47, '⚽️ GOAL'],
+//   [61, '🔁 Substitution'],
+//   [64, '🔶 Yellow card'],
+//   [69, '🔴 Red card'],
+//   [70, '🔁 Substitution'],
+//   [72, '🔁 Substitution'],
+//   [76, '⚽️ GOAL'],
+//   [80, '⚽️ GOAL'],
+//   [92, '🔶 Yellow card'],
+// ]);
+
+// const events = new Array(...new Set(gameEvents.values()));
+// console.log(events);
+
+// gameEvents.delete(64);
+// console.log(gameEvents);
+
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size} minutes`
+// );
+
+// for (const [min, event] of gameEvents) {
+//   console.log(`[${min < 45 ? 'FIRST HALF' : 'SECOND HALF'}] ${min}: ${event}`);
+// }
 
 // const game = {
 //   team1: 'Bayern Munich',
