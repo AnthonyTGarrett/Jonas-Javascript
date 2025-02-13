@@ -1,29 +1,26 @@
 'use strict';
 
-document.body.append(document.createElement('textarea'));
-document.body.append(document.createElement('button'));
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
 
-const processInput = function (e) {
-  const words = textArea.value.split('\n');
-  let i = 1;
-  for (const word of words) {
-    let myWord = word.trim().split('_');
-    console.log(
-      (
-        myWord[0].toLowerCase() +
-        myWord[1][0].toUpperCase() +
-        myWord[1].toLowerCase().slice(1)
-      ).padEnd(20, ' '),
-      '✅'.repeat(i)
-    );
-    i++;
-  }
-};
+// const processInput = function (e) {
+//   const words = textArea.value.split('\n');
+//   for (const [i, word] of words.entries()) {
+//     let [firstWord, secondWord] = word.toLowerCase().trim().split('_');
+//     console.log(
+//       (firstWord + secondWord[0].toUpperCase() + secondWord.slice(1)).padEnd(
+//         20,
+//         ' '
+//       ),
+//       '✅'.repeat(i + 1)
+//     );
+//   }
+// };
 
-const textArea = document.querySelector('textarea');
-const button = document.querySelector('button');
+// const textArea = document.querySelector('textarea');
+// const button = document.querySelector('button');
 
-button.addEventListener('click', processInput);
+// button.addEventListener('click', processInput);
 
 // const gameEvents = new Map([
 //   [17, '⚽️ GOAL'],
