@@ -42,3 +42,12 @@
 
 // poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 // poll.displayResults.call({ answers: [5, 2, 3] });
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.querySelector('body').addEventListener('click', () => {
+    header.style.color = 'blue';
+  });
+})();
